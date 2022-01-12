@@ -17,30 +17,18 @@ caps["appium:connectHardwareKeyboard"] = True
 
 driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
 
-tempo1 = time.time()
-tempo2 = tempo1 + 120000000
-while tempo1 < tempo2:
-    pass
-    tempo1 += 1
+time.sleep(20)
 
 el1 = driver.find_element_by_accessibility_id("Entrar no aplicativo.")
 el1.click()
 
-tempo1 = time.time()
-tempo2 = tempo1 + 120000000
-while tempo1 < tempo2:
-    pass
-    tempo1 += 1
+time.sleep(20)
 
 el2 = driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText")
 #el2.click()
 el2.send_keys("01234567890")
 
-tempo1 = time.time()
-tempo2 = tempo1 + 120000000
-while tempo1 < tempo2:
-    pass
-    tempo1 += 1
+time.sleep(20)
 
 el4 = driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.widget.CheckBox")
 el4.click()
