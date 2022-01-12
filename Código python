@@ -1,0 +1,46 @@
+# This sample code uses the Appium python client
+# pip install Appium-Python-Client
+# Then you can paste this into a file and simply run with Python
+
+from appium import webdriver
+import time
+
+caps = {}
+caps["platformName"] = "Android"
+caps["appium:deviceName"] = "2375a136"
+caps["appium:appPackage"] = "br.gov.caixa.fgts.trabalhador"
+caps["appium:appActivity"] = "br.gov.caixa.fgts.trabalhador.ui.login.SplashScreenFGTSActivity"
+caps["appium:ensureWebviewsHavePages"] = True
+caps["appium:nativeWebScreenshot"] = True
+caps["appium:newCommandTimeout"] = 0
+caps["appium:connectHardwareKeyboard"] = True
+
+driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", caps)
+
+tempo1 = time.time()
+tempo2 = tempo1 + 120000000
+while tempo1 < tempo2:
+    pass
+    tempo1 += 1
+
+el1 = driver.find_element_by_accessibility_id("Entrar no aplicativo.")
+el1.click()
+
+tempo1 = time.time()
+tempo2 = tempo1 + 120000000
+while tempo1 < tempo2:
+    pass
+    tempo1 += 1
+
+el2 = driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.EditText")
+#el2.click()
+el2.send_keys("01234567890")
+
+tempo1 = time.time()
+tempo2 = tempo1 + 120000000
+while tempo1 < tempo2:
+    pass
+    tempo1 += 1
+
+el4 = driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.webkit.WebView/android.view.View/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View/android.view.View/android.view.View/android.view.View[1]/android.view.View[1]/android.view.View/android.widget.CheckBox")
+el4.click()
